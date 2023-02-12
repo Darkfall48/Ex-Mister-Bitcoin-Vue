@@ -1,8 +1,8 @@
 <template>
   <section>
-    <h1>Contact Index</h1>
-    <ContactList v-if="contacts" :contacts="filteredContacts" />
+    <h1>Contacts:</h1>
     <ContactFilter @filter="onSetFilterBy" />
+    <ContactList v-if="contacts" :contacts="filteredContacts" />
   </section>
 </template>
 
@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     filteredContacts() {
-      const regex = new RegExp(this.filterBy.search, 'i')
+      const regex = new RegExp(this.filterBy.txt, 'i')
       return this.contacts.filter((contact) => contact.name.match(regex))
     },
   },
