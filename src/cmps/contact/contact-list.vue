@@ -6,6 +6,7 @@
       class="contact-preview"
     >
       <ContactPreview :contact="contact" />
+      <a @click="onRemoveContact(contact._id)">Delete</a>
     </article>
   </TransitionGroup>
 </template>
@@ -18,6 +19,11 @@ export default {
     contacts: {
       type: Array,
       required: true,
+    },
+  },
+  methods: {
+    onRemoveContact(contactId) {
+      this.$emit('remove', contactId)
     },
   },
   components: { ContactPreview },
