@@ -1,9 +1,16 @@
 <template>
-  <h1>Contact Preview</h1>
+  <h1>{{ contact.name }}</h1>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    contact: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="sass" scoped></style>
