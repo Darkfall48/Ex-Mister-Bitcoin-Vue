@@ -3,6 +3,7 @@
     <h1>{{ contact.name }}</h1>
     <h2>{{ contact.email }}</h2>
     <h2>{{ contact.phone }}</h2>
+    <RouterLink :to="`/contact/edit/${contact._id}`">Edit</RouterLink>
     <RouterLink to="/contact">Back</RouterLink>
   </section>
 </template>
