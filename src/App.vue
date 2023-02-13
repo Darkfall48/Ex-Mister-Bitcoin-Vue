@@ -2,10 +2,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 import AppHeader from '@/cmps/app/app-header.vue'
 import AppFooter from '@/cmps/app/app-footer.vue'
+import UserMsg from '@/cmps/app/user-msg.vue'
 export default {
   components: {
     AppHeader,
     AppFooter,
+    UserMsg,
   },
 }
 </script>
@@ -13,6 +15,7 @@ export default {
 <template>
   <AppHeader />
   <RouterView />
+  <UserMsg />
   <AppFooter />
 </template>
 

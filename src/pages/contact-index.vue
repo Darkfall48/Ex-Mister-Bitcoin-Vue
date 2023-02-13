@@ -1,13 +1,9 @@
 <template>
   <section>
     <h1>Contacts:</h1>
-    <UserMsg />
+    <!-- <UserMsg /> -->
     <ContactFilter @filter="onSetFilterBy" />
-    <ContactList
-      v-if="contacts"
-      @remove="removeContact"
-      :contacts="filteredContacts"
-    />
+    <ContactList v-if="contacts" @remove="removeContact" :contacts="contacts" />
   </section>
 </template>
 
@@ -17,7 +13,6 @@ import { contactService } from '@/services/contact.service.js'
 
 import ContactList from '@/cmps/contact/contact-list.vue'
 import ContactFilter from '@/cmps/contact/contact-filter.vue'
-import UserMsg from '../cmps/app/user-msg.vue'
 
 export default {
   data() {
@@ -27,11 +22,29 @@ export default {
     }
   },
   async created() {
-    this.contacts = await contactService.getContacts()
+    try {
+      await this.loadContacts()
+    } catch (err) {
+      console.log('Cannot load contacts on mount', err)
+    }
   },
   methods: {
-    onSetFilterBy(filterBy) {
-      this.filterBy = filterBy
+    async loadContacts() {
+      try {
+        this.contacts = await contactService.getContacts(this.filterBy)
+        console.log('Contacts loaded')
+      } catch (err) {
+        // console.log('Cannot load contacts', err)
+        throw err
+      }
+    },
+    async onSetFilterBy(filterBy) {
+      try {
+        this.filterBy = filterBy
+        await this.loadContacts()
+      } catch (err) {
+        console.log('Cannot load filtered contacts', err)
+      }
     },
     async removeContact(contactId) {
       const msg = {
@@ -47,12 +60,12 @@ export default {
     },
   },
   computed: {
-    filteredContacts() {
-      const regex = new RegExp(this.filterBy.txt, 'i')
-      return this.contacts.filter((contact) => contact.name.match(regex))
-    },
+    // filteredContacts() {
+    //   const regex = new RegExp(this.filterBy.txt, 'i')
+    //   return this.contacts.filter((contact) => contact.name.match(regex))
+    // },
   },
-  components: { ContactList, ContactFilter, UserMsg },
+  components: { ContactList, ContactFilter },
 }
 </script>
 
