@@ -2,7 +2,6 @@
 
 function createEventEmitter(defaultHandler = null) {
   const listenersMap = {}
-  const defHandler = defaultHandler
 
   return {
     on(evName, listener) {
@@ -22,5 +21,17 @@ function createEventEmitter(defaultHandler = null) {
   }
 }
 export const eventBus = createEventEmitter(() =>
-  console.log('No handler found...')
+  console.log('No handler associated with this event...')
 )
+
+export function showUserMsg(msg) {
+  eventBus.emit('show-msg', msg)
+}
+
+export function showSuccessMsg(txt) {
+  showUserMsg({ txt, type: 'success' })
+}
+
+export function showErrorMsg(txt) {
+  showUserMsg({ txt, type: 'error' })
+}
