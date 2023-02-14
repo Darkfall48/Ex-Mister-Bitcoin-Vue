@@ -18,7 +18,7 @@
         type="text"
         placeholder="Enter contact phone..."
       />
-      <button>Save</button>
+      <button type="submit">Save</button>
     </form>
     <RouterLink to="/contact">Back</RouterLink>
   </section>
