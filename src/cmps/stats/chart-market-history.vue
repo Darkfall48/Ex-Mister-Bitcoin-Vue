@@ -1,7 +1,8 @@
 <template>
-  <article>
-    <h1>Market Price History</h1>
+  <article class="stats-index-charts-list-chart">
+    <h1 class="stats-index-charts-list-chart-title">Market Price History</h1>
     <Bar
+      class="stats-index-charts-list-chart-container"
       v-if="chartData.labels"
       id="chart-market-price-history"
       :options="chartOptions"
@@ -35,7 +36,8 @@ export default {
         datasets: [
           {
             label: 'Value (USD)',
-            backgroundColor: '#f7931a99',
+            backgroundColor: 'gold',
+
             data: null,
           },
         ],

@@ -1,0 +1,9 @@
+.app-footer {
+  display: grid !important;
+  text-align: center;
+  background-color: $secondary-color-5;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: em(18px);
+  @include body-2;
+}

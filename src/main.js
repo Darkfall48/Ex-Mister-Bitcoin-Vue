@@ -6,7 +6,7 @@ import { store } from './store/store'
 //? Components
 import App from './App.vue'
 //? Styles
-import './assets/main.css'
+import './assets/style/imports.scss'
 
 const app = createApp(App)
 

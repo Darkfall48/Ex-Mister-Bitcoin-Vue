@@ -1,8 +1,9 @@
 <template>
-  <section>
-    <h1>Stats Page</h1>
-    <ChartAvgBlockSize />
-    <ChartMarketHistory />
+  <section class="stats-index">
+    <section class="stats-index-charts-list">
+      <ChartAvgBlockSize />
+      <ChartMarketHistory />
+    </section>
   </section>
 </template>
 
@@ -12,5 +13,3 @@ import ChartMarketHistory from '@/cmps/stats/chart-market-history.vue'
 
 export default { components: { ChartAvgBlockSize, ChartMarketHistory } }
 </script>
-
-<style lang="sass" scoped></style>

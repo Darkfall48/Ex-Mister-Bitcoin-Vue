@@ -1,0 +1,45 @@
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // gap: 9px;
+  margin-top: 18px;
+  padding: 18px;
+  background-color: $secondary-color-5;
+  border-radius: em(18px);
+  &-logo {
+    @include body-1;
+    color: $primary-color-3;
+  }
+  &-rate {
+    @include body-1;
+    color: $primary-color-3;
+  }
+  &-exchange {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    @include body-1;
+    color: $primary-color-3;
+    & h1 {
+      @include body-1;
+    }
+    & h2 {
+      @include body-1;
+    }
+    & img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    @include body-1;
+    color: $primary-color-3;
+  }
+}

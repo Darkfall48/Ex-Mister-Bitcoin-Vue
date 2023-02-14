@@ -1,0 +1,30 @@
+.stats-index {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  &-charts-list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    // height: fit-content;
+    &-chart {
+      // display: flex;
+      // flex-direction: column;
+      background-color: $secondary-color-4;
+      border-radius: 18px;
+      padding: 8px;
+      &-title {
+        color: $secondary-color-3;
+      }
+      &-container {
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 <template>
-  <article>
-    <h1>Average Block Size</h1>
+  <article class="stats-index-charts-list-chart">
+    <h1 class="stats-index-charts-list-chart-title">Average Block Size</h1>
     <Bar
+      class="stats-index-charts-list-chart-container"
       v-if="avg"
       id="chart-avg-block-size"
       :options="chartOptions"
@@ -50,7 +51,7 @@ export default {
         datasets: [
           {
             label: 'Average block size (in MB)',
-            backgroundColor: '#f7931a99',
+            backgroundColor: 'gold',
             data: this.getDatasetData,
           },
         ],
@@ -68,5 +69,3 @@ export default {
   },
 }
 </script>
-
-<style lang="sass" scoped></style>
