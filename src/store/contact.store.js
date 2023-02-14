@@ -22,6 +22,9 @@ export const contactStore = {
     setContact(state, { contact }) {
       state.contact = contact
     },
+    clearContact(state) {
+      state.contact = []
+    },
     removeContact(state, { contactId }) {
       const idx = state.contacts.findIndex(
         (contact) => contact._id === contactId

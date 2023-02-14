@@ -1,7 +1,9 @@
 <template>
-  <section>
-    <h1>Contacts:</h1>
-    <RouterLink to="/contact/edit">Add Contacts</RouterLink>
+  <section class="contact-index">
+    <h1 class="contact-index-title">Contacts:</h1>
+    <RouterLink class="contact-index-link" to="/contact/edit"
+      >Add Contacts</RouterLink
+    >
     <ContactFilter @filter="onSetFilterBy" />
     <ContactList v-if="contacts" @remove="removeContact" :contacts="contacts" />
   </section>
@@ -9,7 +11,6 @@
 
 <script>
 import { eventBus } from '@/services/connections/eventBus.service.js'
-import { contactService } from '@/services/contact.service.js'
 
 import ContactList from '@/cmps/contact/contact-list.vue'
 import ContactFilter from '@/cmps/contact/contact-filter.vue'
@@ -17,7 +18,6 @@ import ContactFilter from '@/cmps/contact/contact-filter.vue'
 export default {
   data() {
     return {
-      // contacts: null,
       filterBy: {},
     }
   },
@@ -74,4 +74,11 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="scss" scoped>
+.contact-index {
+  &-title {
+  }
+  &-link {
+  }
+}
+</style>

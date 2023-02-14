@@ -9,14 +9,7 @@
 </template>
 
 <script>
-import { contactService } from '@/services/contact.service.js'
 export default {
-  // data() {
-  //   return {
-  //     contact: null,
-  //   }
-  // },
-
   async created() {
     try {
       await this.loadContact()
