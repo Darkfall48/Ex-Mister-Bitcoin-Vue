@@ -1,8 +1,13 @@
 //? Libraries
 import { createStore } from 'vuex'
+//? Stores
+import { contactStore } from './contact.store'
 
 export const store = createStore({
   strict: true,
+  modules: {
+    contactStore,
+  },
 })
 
 //? For Debugging

@@ -17,7 +17,7 @@ import ContactFilter from '@/cmps/contact/contact-filter.vue'
 export default {
   data() {
     return {
-      contacts: null,
+      // contacts: null,
       filterBy: {},
     }
   },
@@ -31,7 +31,11 @@ export default {
   methods: {
     async loadContacts() {
       try {
-        this.contacts = await contactService.getContacts(this.filterBy)
+        await this.$store.dispatch({
+          type: 'loadContacts',
+          filterBy: this.filterBy,
+        })
+        // this.contacts = await contactService.getContacts(this.filterBy)
         console.log('Contacts loaded')
       } catch (err) {
         // console.log('Cannot load contacts', err)
@@ -52,10 +56,8 @@ export default {
         type: 'success',
         timeout: 2500,
       }
-      await contactService.deleteContact(contactId)
-      this.contacts = this.contacts.filter(
-        (contact) => contact.id !== contactId
-      )
+      await this.$store.dispatch({ type: 'removeContact', contactId })
+      // await contactService.deleteContact(contactId)
       eventBus.emit('user-msg', msg)
     },
   },
@@ -64,6 +66,9 @@ export default {
     //   const regex = new RegExp(this.filterBy.txt, 'i')
     //   return this.contacts.filter((contact) => contact.name.match(regex))
     // },
+    contacts() {
+      return this.$store.getters.contacts
+    },
   },
   components: { ContactList, ContactFilter },
 }

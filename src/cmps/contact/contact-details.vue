@@ -11,15 +11,40 @@
 <script>
 import { contactService } from '@/services/contact.service.js'
 export default {
-  data() {
-    return {
-      contact: null,
+  // data() {
+  //   return {
+  //     contact: null,
+  //   }
+  // },
+
+  async created() {
+    try {
+      await this.loadContact()
+    } catch (err) {
+      console.log('Cannot load contacts on mount', err)
     }
   },
 
-  async created() {
-    const contactId = this.$route.params._id
-    this.contact = await contactService.getContactById(contactId)
+  methods: {
+    async loadContact() {
+      const contactId = this.$route.params._id
+      try {
+        await this.$store.dispatch({
+          type: 'loadContact',
+          contactId,
+        })
+        // this.contact = await contactService.getContactById(contactId)
+        console.log('Contact loaded')
+      } catch (err) {
+        console.log('Cannot load contact:', contactId, err)
+        throw err
+      }
+    },
+  },
+  computed: {
+    contact() {
+      return this.$store.getters.contact
+    },
   },
 }
 </script>
