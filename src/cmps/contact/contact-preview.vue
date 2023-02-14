@@ -1,7 +1,19 @@
 <template>
-  <h1>{{ contact.name }}</h1>
-  <RouterLink :to="`/contact/${contact._id}`">Details</RouterLink>
-  <RouterLink :to="`/contact/edit/${contact._id}`">Edit</RouterLink>
+  <img
+    :src="`https://robohash.org/set_set4/bgset_bg2/${contact.name}`"
+    :alt="contact.name"
+  />
+  <h1 class="contacts-list-contact-name">{{ contact.name }}</h1>
+  <RouterLink
+    class="contacts-list-contact-details-link"
+    :to="`/contact/${contact._id}`"
+    >Details</RouterLink
+  >
+  <RouterLink
+    class="contacts-list-contact-edit-link"
+    :to="`/contact/edit/${contact._id}`"
+    >Edit</RouterLink
+  >
   <!-- <a @click="onRemoveContact(contact._id)">Delete</a> -->
 </template>
 

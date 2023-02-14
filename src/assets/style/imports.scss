@@ -15,9 +15,12 @@
 //* Views
 @import 'views/home';
 @import 'views/stats-index';
+@import 'views/contact-index';
 
 //* Components
 @import 'cmps/app-header';
 @import 'cmps/app-main';
 @import 'cmps/app-footer';
+@import 'cmps/contact-list';
+@import 'cmps/contact-filter';
 @import 'cmps/nice-button';

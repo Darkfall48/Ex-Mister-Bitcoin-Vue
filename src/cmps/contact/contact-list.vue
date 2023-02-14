@@ -1,12 +1,16 @@
 <template>
-  <TransitionGroup name="list" tag="section" class="contact-list">
+  <TransitionGroup name="list" tag="section" class="contacts-list">
     <article
       v-for="contact in contacts"
       :key="contact._id"
-      class="contact-preview"
+      class="contacts-list-contact"
     >
       <ContactPreview :contact="contact" />
-      <a @click="onRemoveContact(contact._id)">Delete</a>
+      <a
+        class="contacts-list-contact-delete-btn"
+        @click="onRemoveContact(contact._id)"
+        >Delete</a
+      >
     </article>
   </TransitionGroup>
 </template>

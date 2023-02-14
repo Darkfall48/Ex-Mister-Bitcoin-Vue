@@ -1,5 +1,6 @@
 <template>
   <section class="stats-index">
+    <h1 class="stats-index-title">Statistics</h1>
     <section class="stats-index-charts-list">
       <ChartAvgBlockSize />
       <ChartMarketHistory />

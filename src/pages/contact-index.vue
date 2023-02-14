@@ -1,9 +1,6 @@
 <template>
   <section class="contact-index">
-    <h1 class="contact-index-title">Contacts:</h1>
-    <RouterLink class="contact-index-link" to="/contact/edit"
-      >Add Contacts</RouterLink
-    >
+    <h1 class="contact-index-title">Contacts</h1>
     <ContactFilter @filter="onSetFilterBy" />
     <ContactList v-if="contacts" @remove="removeContact" :contacts="contacts" />
   </section>
@@ -73,12 +70,3 @@ export default {
   components: { ContactList, ContactFilter },
 }
 </script>
-
-<style lang="scss" scoped>
-.contact-index {
-  &-title {
-  }
-  &-link {
-  }
-}
-</style>
