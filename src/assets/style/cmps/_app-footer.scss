@@ -5,5 +5,8 @@
   padding-top: 18px;
   padding-bottom: 18px;
   border-radius: em(18px);
-  @include body-2;
+  & h1 {
+    @include h3;
+    color: lightgrey;
+  }
 }

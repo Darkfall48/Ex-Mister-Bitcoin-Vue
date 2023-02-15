@@ -1,6 +1,12 @@
 <template>
-  <h1 class="app-header-logo">Mister Bitcoin</h1>
-  <h2 class="app-header-rate" v-if="rate">1$ = {{ rate }}₿</h2>
+  <h1 class="app-header-logo">Mr. ₿itcoin</h1>
+  <h2
+    class="app-header-rate"
+    title="Current Bitcoin Rate in American Dollar"
+    v-if="rate"
+  >
+    1$ = {{ rate }}₿
+  </h2>
   <nav class="app-header-nav">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/contact">Contact</RouterLink>
@@ -8,8 +14,12 @@
     <RouterLink to="/about">About</RouterLink>
   </nav>
   <div class="app-header-exchange">
-    <h1 v-if="user">{{ user.name }}</h1>
-    <img :src="`https://robohash.org/set_set5/${user.name}`" :alt="user.name" />
+    <h1 v-if="user" title="The best person!">{{ user.name }}</h1>
+    <img
+      :src="`https://robohash.org/set_set5/${user.name}`"
+      :alt="user.name"
+      :title="user.name"
+    />
   </div>
 </template>
 

@@ -10,11 +10,14 @@
         v-model="filterBy.txt"
         type="text"
         name="filter-by-name"
-        title="Filter by name"
+        title="Find a contact by name"
         placeholder="Enter a name..."
       />
     </form>
-    <RouterLink class="contact-filter-add-btn nice-button" to="/contact/edit"
+    <RouterLink
+      class="contact-filter-add-btn nice-button"
+      title="Add a new contact"
+      to="/contact/edit"
       >New Contact</RouterLink
     >
   </article>

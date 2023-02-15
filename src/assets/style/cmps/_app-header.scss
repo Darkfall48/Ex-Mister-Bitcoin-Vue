@@ -9,12 +9,16 @@
   background-color: $secondary-color-5;
   border-radius: em(18px);
   &-logo {
-    @include body-1;
+    @include h3;
     color: $primary-color-3;
   }
   &-rate {
     @include body-1;
     color: $primary-color-3;
+  }
+  & h2 {
+    @include body-1;
+    color: $clr3;
   }
   &-exchange {
     display: flex;
@@ -24,10 +28,7 @@
     @include body-1;
     color: $primary-color-3;
     & h1 {
-      @include body-1;
-    }
-    & h2 {
-      @include body-1;
+      @include h3;
     }
     & img {
       height: 32px;

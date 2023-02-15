@@ -8,6 +8,7 @@
       <ContactPreview :contact="contact" />
       <a
         class="contacts-list-contact-delete-btn"
+        title="Delete this contact"
         @click="onRemoveContact(contact._id)"
         >Delete</a
       >

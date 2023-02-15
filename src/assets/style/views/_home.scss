@@ -1,6 +1,14 @@
 .home-page {
-  & h1 {
-    @include h1-large;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  &-title {
+    @include h1-small;
+    text-align: center;
+    color: $primary-color-3;
+  }
+  &-balance {
+    @include h1-small;
     text-align: center;
     color: $primary-color-2;
   }
