@@ -17,14 +17,16 @@
       <label for="edit-email">E-Mail</label>
       <input
         v-model="currentContact.email"
-        type="text"
+        type="email"
         name="edit-email"
         placeholder="Enter contact email..."
       />
       <label for="edit-phone">Phone Number</label>
       <input
         v-model="currentContact.phone"
-        type="text"
+        type="tel"
+        minlength="9"
+        maxlength="14"
         name="edit-phone"
         placeholder="Enter contact phone..."
       />
