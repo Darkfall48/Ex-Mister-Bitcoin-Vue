@@ -11,14 +11,21 @@
   &-logo {
     @include h3;
     color: $primary-color-3;
+    &:hover {
+      text-decoration: none;
+    }
   }
   &-rate {
     @include body-1;
     color: $primary-color-3;
   }
   & h2 {
-    @include body-1;
-    color: $clr3;
+    display: none;
+    @include for-normal-layout {
+      display: block;
+      @include body-1;
+      color: $clr3;
+    }
   }
   &-exchange {
     display: flex;
@@ -28,7 +35,11 @@
     @include body-1;
     color: $primary-color-3;
     & h1 {
-      @include h3;
+      display: none;
+      @include for-normal-layout {
+        display: block;
+        @include h3;
+      }
     }
     & img {
       height: 32px;

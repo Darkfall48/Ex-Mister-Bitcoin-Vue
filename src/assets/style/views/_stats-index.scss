@@ -12,11 +12,19 @@
   }
   &-charts-list {
     display: flex !important;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 18px;
     font-size: 24px;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 400px;
+    width: 430px;
+    @include for-normal-layout {
+      flex-direction: row !important;
+      overflow-x: auto;
+      width: 100%;
+    }
     // height: fit-content;
     &-chart {
       // display: flex;
@@ -25,7 +33,10 @@
       border-radius: 18px;
       padding: 8px;
       aspect-ratio: 16/9;
-      width: 400px;
+      width: 300px;
+      @include for-normal-layout {
+        width: 400px;
+      }
       &-title {
         color: $secondary-color-3;
       }

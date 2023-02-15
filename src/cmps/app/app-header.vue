@@ -1,5 +1,7 @@
 <template>
-  <h1 class="app-header-logo">Mr. ₿itcoin</h1>
+  <RouterLink to="/" class="app-header-logo" title="Check your current Balance"
+    >Mr. ₿itcoin</RouterLink
+  >
   <h2
     class="app-header-rate"
     title="Current Bitcoin Rate in American Dollar"
