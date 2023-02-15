@@ -10,10 +10,10 @@
     1$ = {{ rate }}₿
   </h2>
   <nav class="app-header-nav">
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/contact">Contact</RouterLink>
+    <RouterLink to="/">Balance</RouterLink>
+    <RouterLink to="/contact">Contacts</RouterLink>
     <RouterLink to="/stats">Stats</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
+    <!-- <RouterLink to="/about">About</RouterLink> -->
   </nav>
   <div class="app-header-exchange">
     <h1 v-if="user" title="The best person!">{{ user.name }}</h1>
