@@ -1,29 +1,43 @@
 <template>
-  <section v-if="currentContact">
-    <h1>{{ getTitle }}</h1>
+  <section v-if="currentContact" class="contact-edit">
+    <h1 class="contact-edit-title">{{ getTitle }}</h1>
     <img
+      class="contact-edit-img"
       :src="'https://robohash.org/set_set4/bgset_bg2/' + currentContact.name"
       :alt="currentContact.name"
     />
-    <form @submit.prevent="onSave">
+    <form @submit.prevent="onSave" class="contact-edit-form">
+      <label for="edit-name">Full Name</label>
       <input
         v-model="currentContact.name"
         type="text"
+        name="edit-name"
         placeholder="Enter contact name..."
       />
+      <label for="edit-email">E-Mail</label>
       <input
         v-model="currentContact.email"
         type="text"
+        name="edit-email"
         placeholder="Enter contact email..."
       />
+      <label for="edit-phone">Phone Number</label>
       <input
         v-model="currentContact.phone"
         type="text"
+        name="edit-phone"
         placeholder="Enter contact phone..."
       />
-      <button type="submit">Save</button>
+      <button type="submit" class="contact-edit-form-save-btn nice-button">
+        Save
+      </button>
     </form>
-    <RouterLink to="/contact">Back</RouterLink>
+    <RouterLink
+      to="/contact"
+      class="contact-edit-back-link"
+      title="Cancel contact"
+      >Cancel</RouterLink
+    >
   </section>
 </template>
 

@@ -1,0 +1,53 @@
+.contact-edit {
+  display: grid !important;
+  grid-template-areas:
+    'title title title'
+    'img . back-link'
+    'img form form';
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: stretch;
+  height: fit-content;
+  max-height: 100%;
+  max-width: 100%;
+  gap: 18px;
+  &-title {
+    grid-area: title;
+    @include h2;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  &-img {
+    grid-area: img;
+    min-height: 256px;
+    min-width: 256px;
+    max-height: 256px;
+    max-width: 256px;
+    border-radius: 50%;
+    border: 1.5px darkgrey solid;
+  }
+  &-form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    text-align: start;
+    & label {
+    }
+    & input {
+    }
+    &-save-btn {
+      place-self: end;
+      margin-top: 18px;
+      width: fit-content;
+    }
+  }
+  &-back-link {
+    grid-area: back-link;
+    font-size: larger;
+    font-weight: bold;
+    color: darkgrey;
+  }
+}
