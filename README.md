@@ -1,4 +1,4 @@
-# **Mister Bitcoin**: Your simple and intuitive Vue.js-based web app for managing Bitcoin transactions
+# Mister Bitcoin: Your simple and intuitive Vue.js-based web app for managing Bitcoin transactions
 **Mister Bitcoin** is a web application that enables users to view real-time market prices for Bitcoin and track and manage their Bitcoin transactions. Built using Vue.js, the application boasts a responsive design and CRUDL capabilities for contacts and user messages. Additionally, the app features third-party libraries and tools for presenting data using charts, making it easy for users to analyze Bitcoin market trends.
 
 ![Ex-Mister-Bitcoin-Vue-Contact](https://user-images.githubusercontent.com/35638060/220618641-80caebbf-c9bb-463a-bc23-1c000c2fa63f.png)
@@ -62,11 +62,11 @@ This page allows users to edit their contact information, including the name, em
 ### Statistics
 ![Ex-Mister-Bitcoin-Vue-Stats](https://user-images.githubusercontent.com/35638060/220625054-98d1bd79-ac04-48ca-b05a-21c119babcfe.png)
 
-This page presents a range of statistics related to Bitcoin, including the historical price changes, market capitalization, and more. It displays data in a chart and table format, providing an easy-to-understand and interactive interface for users to analyze Bitcoin market trends.
+This page presents a range of statistics related to Bitcoin, including the historical price changes, market capitalization, and more. It displays data in a chart format, providing an easy-to-understand and interactive interface for users to analyze Bitcoin market trends.
 
 
 
-#### Technologies Used
+### Technologies Used
 The technologies used in building **Mister Bitcoin** include:
 
 + **Vue.js**: a progressive JavaScript framework used for building user interfaces and single-page applications.
