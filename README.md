@@ -74,7 +74,7 @@ The technologies used in building **Mister Bitcoin** include:
 + **Vue-Router**: a plugin for Vue.js that provides a routing system for single-page applications.
 + **Vuex**: a state management library for Vue.js applications.
 + **Sass**: a preprocessor scripting language used to create CSS stylesheets.
-+ **Vue CLI**: a command-line interface for creating, configuring, and deploying Vue.js projects.
++ **Vite CLI**: a command-line interface for creating, configuring, and deploying Vue.js projects.
 + **GitHub Pages**: a static site hosting service that allows you to host your website directly from your GitHub repository.
 
 ### Live Demo
